@@ -1,7 +1,7 @@
 const copy = () => {
-    var copyText = document.getElementById("output");
+    let copyText = document.getElementById("output");
     copyText.select();
-    copyText.setSelectionRange(0, 99999);
+    copyText.setSelectionRange(0, copyText.value.length);
     document.execCommand("copy");
     document.activeElement.blur();
 }
@@ -17,8 +17,8 @@ const countLettersTo = (text) => {
 }
 
 const wRiTe = () => {
-    var text = document.getElementById('input').value.toLowerCase().split('');
-    var output = '';
+    let text = document.getElementById('input').value.toLowerCase().split('');
+    let output = '';
     for (let i = 0; i < text.length; i++) {
         let appendChar = text[i] + '';
         if (countLettersTo(output) % 2 == 1) {
